@@ -129,10 +129,10 @@ void BezierLayer::updateCanvas() {
 	m_canvas->drawSegment(topRight, m_controlPoint2, 1, secondaryLine);
 
 	// start/stop
-	m_canvas->drawSegment(bottomLeft, bottomLeft, m_controlRadius , endPoint);
-	m_canvas->drawSegment(topRight, topRight, m_controlRadius, endPoint);
+	m_canvas->drawDot(bottomLeft, m_controlRadius , endPoint);
+	m_canvas->drawDot(topRight, m_controlRadius, endPoint);
 
 	// control points
-	m_canvas->drawSegment(m_controlPoint1, m_controlPoint1, m_controlRadius, control1);
-	m_canvas->drawSegment(m_controlPoint2, m_controlPoint2, m_controlRadius, control2);
+	m_canvas->drawDot(m_controlPoint1, m_controlRadius, control1);
+	m_canvas->drawDot(m_controlPoint2, m_controlRadius, control2);
 }
